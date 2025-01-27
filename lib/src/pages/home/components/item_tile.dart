@@ -3,15 +3,15 @@ import 'package:hortifruit/src/config/custom_colors.dart';
 import 'package:hortifruit/src/models/item_model.dart';
 import 'package:hortifruit/src/services/utils_services.dart';
 
+UtilsServices utils = UtilsServices();
+
 class ItemTile extends StatelessWidget {
   final ItemModel item;
 
-  ItemTile({
+  const ItemTile({
     super.key,
     required this.item,
   });
-
-  UtilsServices utils = UtilsServices();
 
   @override
   Widget build(BuildContext context) {
