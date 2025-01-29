@@ -101,7 +101,7 @@ class _HomeTabState extends State<HomeTab> {
                 return CategoryTile(
                   category: app_data.categories[index],
                   isSelected: app_data.categories[index] == selectedCategory,
-                  onPressed: () {
+                  onPressed: ()  {
                     setState(() {
                       selectedCategory = app_data.categories[index];
                     });
