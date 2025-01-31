@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hortifruit/src/pages/cart/cart_tab.dart';
 import 'package:hortifruit/src/pages/home/home_tab.dart';
 
 class BaseScreen extends StatefulWidget {
@@ -19,7 +20,7 @@ class _BaseScreenState extends State<BaseScreen> {
         physics: NeverScrollableScrollPhysics(),
         children: [
           HomeTab(),
-          Container(color: Colors.yellow),
+          CartTab(),
           Container(color: Colors.blue),
           Container(color: Colors.purple),
         ],
