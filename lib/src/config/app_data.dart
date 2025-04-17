@@ -1,5 +1,7 @@
 import 'package:hortifruit/src/models/cart_item_model.dart';
 import 'package:hortifruit/src/models/item_model.dart';
+import 'package:hortifruit/src/models/order_models.dart';
+import 'package:hortifruit/src/models/user_model.dart';
 
 ItemModel apple = ItemModel(
   description:
@@ -77,4 +79,47 @@ List<CartItemModel> cartItems = [
   CartItemModel(item: mango, quantity: 1),
   CartItemModel(item: guava, quantity: 3),
   CartItemModel(item: apple, quantity: 2),
+];
+
+UserModel user = UserModel(
+  name: "Dalessandro",
+  email: "dalessandro@gmail.com",
+  phone: "99 99999-9999",
+  cpf: "999.999.999-99",
+  password: "senhasuperforte",
+);
+
+List<OrderModels> orders = [
+  OrderModels(
+    copyAndPaste: 'q1w2e3r4t5y6',
+    createdDateTime: DateTime.parse('2025-04-16 11:00:10.458'),
+    overdueDateTime: DateTime.parse('2025-04-16 00:00:10.458'),
+    id: 'asd6a54d6s2d1',
+    status: 'pending_payment',
+    total: 11.0,
+    items: [
+      CartItemModel(
+        item: apple,
+        quantity: 2,
+      ),
+      CartItemModel(
+        item: mango,
+        quantity: 2,
+      ),
+    ],
+  ),
+  OrderModels(
+    copyAndPaste: 'q1w2e3r4t5y6',
+    createdDateTime: DateTime.parse('2025-04-16 11:00:10.458'),
+    overdueDateTime: DateTime.parse('2025-04-16 00:00:10.458'),
+    id: 'asd6a54d6s2d1',
+    status: 'pending_payment',
+    total: 11.0,
+    items: [
+      CartItemModel(
+        item: guava,
+        quantity: 1,
+      ),
+    ],
+  )
 ];

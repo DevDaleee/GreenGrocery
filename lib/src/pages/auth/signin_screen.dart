@@ -1,6 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:hortifruit/src/pages/auth/componentes/custom_text_field.dart';
+import 'package:hortifruit/src/pages/widget/custom_text_field.dart';
 import 'package:hortifruit/src/pages/auth/signup_screen.dart';
 import 'package:hortifruit/src/pages/base/base_screen.dart';
 import 'package:hortifruit/src/config/custom_colors.dart';

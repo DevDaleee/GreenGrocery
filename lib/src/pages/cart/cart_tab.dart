@@ -120,8 +120,11 @@ class _CartTabState extends State<CartTab> {
       context: context,
       builder: (context) {
         return AlertDialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
           title: Text('Confirmação'),
-          content: Text('Deseja realmente concliir o pedido?'),
+          content: Text('Deseja realmente concluir o pedido?'),
           actions: [
             TextButton(
               onPressed: () {

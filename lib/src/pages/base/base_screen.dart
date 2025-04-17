@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hortifruit/src/pages/cart/cart_tab.dart';
 import 'package:hortifruit/src/pages/home/home_tab.dart';
+import 'package:hortifruit/src/pages/orders/orders_page.dart';
+import 'package:hortifruit/src/pages/profile/profile_tab.dart';
 
 class BaseScreen extends StatefulWidget {
   const BaseScreen({super.key});
@@ -21,8 +23,8 @@ class _BaseScreenState extends State<BaseScreen> {
         children: [
           HomeTab(),
           CartTab(),
-          Container(color: Colors.blue),
-          Container(color: Colors.purple),
+          OrdersPage(),
+          PreofilePage(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
