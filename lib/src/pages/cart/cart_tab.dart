@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hortifruit/src/config/custom_colors.dart';
 import 'package:hortifruit/src/models/cart_item_model.dart';
 import 'package:hortifruit/src/pages/cart/components/custom_card_cart.dart';
+import 'package:hortifruit/src/pages/widget/payment_dialog.dart';
 import 'package:hortifruit/src/services/utils_services.dart';
 import 'package:hortifruit/src/config/app_data.dart' as app_data;
 
@@ -97,7 +98,14 @@ class _CartTabState extends State<CartTab> {
                     ),
                     onPressed: () async {
                       bool? result = await showOrderConfirmaton();
-                      debugPrint(result.toString());
+                      if (result ?? false) {
+                        showDialog(
+                          context: context,
+                          builder: (context) {
+                            return PaymentDialog(order: app_data.orders.first);
+                          },
+                        );
+                      }
                     },
                     child: Text(
                       'Conluir Pedido',
