@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:hortifruit/src/pages/widget/app_name_widget.dart';
 import 'package:hortifruit/src/pages/widget/custom_text_field.dart';
 import 'package:hortifruit/src/pages/auth/signup_screen.dart';
 import 'package:hortifruit/src/pages/base/base_screen.dart';
@@ -25,20 +26,9 @@ class SignInScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
-                          'Green',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 40,
-                          ),
-                        ),
-                        Text(
-                          'grocer',
-                          style: TextStyle(
-                            color: CustomColors.customContrastColor,
-                            fontSize: 40,
-                          ),
+                        AppNameWidget(
+                          greenTitleColor: Colors.white,
+                          textSize: 40,
                         ),
                       ],
                     ),

@@ -19,6 +19,9 @@ class _CartTabState extends State<CartTab> {
   void removeItemFromCart(CartItemModel cartItem) {
     setState(() {
       app_data.cartItems.remove(cartItem);
+
+      utils.showToast(
+          message: '${cartItem.item.itemName} removido(a) do carrinho');
     });
   }
 
@@ -99,12 +102,18 @@ class _CartTabState extends State<CartTab> {
                     onPressed: () async {
                       bool? result = await showOrderConfirmaton();
                       if (result ?? false) {
-                        showDialog(
-                          context: context,
-                          builder: (context) {
-                            return PaymentDialog(order: app_data.orders.first);
-                          },
-                        );
+                        if (context.mounted) {
+                          showDialog(
+                            context: context,
+                            builder: (context) {
+                              return PaymentDialog(
+                                  order: app_data.orders.first);
+                            },
+                          );
+                        }
+                      } else {
+                        utils.showToast(
+                            message: 'Pedido não confirmado!', isError: true);
                       }
                     },
                     child: Text(
